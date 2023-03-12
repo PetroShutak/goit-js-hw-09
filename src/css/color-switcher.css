@@ -6,7 +6,12 @@ body {
     align-items: center;
     height: 100vh;
   }
-  
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
   p {
     position: fixed;
     top: 20px;
