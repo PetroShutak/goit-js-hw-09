@@ -28,35 +28,6 @@ button[type='button'] {
   transition: all 0.2s ease;
 }
 
-/* button[type='button'][data-start] {
-  background-color: #007bff;
-}
-
-button[type='button'][data-start]:hover {
-  background-color: #0062cc;
-}
-
-button[type='button'][data-stop] {
-  background-color: #dc3545;
-  margin-left: 10px;
-}
-
-button[type='button'][data-stop]:hover {
-  background-color: #c82333;
-} */
-/* 
-body {
-  background-color: white;
-  transition: background-color 2s ease-in-out;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-*/
-
 button {
   font-size: 16px;
   padding: 10px;
