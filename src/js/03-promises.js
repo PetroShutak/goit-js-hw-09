@@ -1,7 +1,7 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
+// first variant
 // function createPromise(position, delay) {
-//   const shouldResolve = Math.random() > 0.3; 
+//   const shouldResolve = Math.random() > 0.3;
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //       if (shouldResolve) {
@@ -35,36 +35,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //     console.log(currentDelay);
 //   }
 // });
-// createPromise(8, 3500)
-//   .then(({ position, delay }) => {
-//     console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-//   })
-//   .catch(({ position, delay }) => {
-//     console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-//   });
-// ===================/bad code===========================
-// const form = document.querySelector('.form');
-// form.addEventListener('submit', event => {
-//   event.preventDefault();
-
-//   const delay = Number(form.elements.delay.value);
-//   const step = Number(form.elements.step.value);
-//   const amount = Number(form.elements.amount.value);
-
-//   let currentDelay = delay;
-//   for (let i = 1; i <= amount; i++) {
-//     createPromise(i, currentDelay)
-//     .then(({ position, delay }) => {
-//       Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-//     })
-//     .catch(({ position, delay }) => {
-//       Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-//     });
-//     currentDelay += delay + step;
-//     console.log(currentDelay);
-//   }
-// });
-// ===================\bad code===========================
 
 // second variant
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -103,32 +73,6 @@ function onCreateClick(e) {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
     inputDelay += Number(step.value);
-      console.log(inputDelay);
+    console.log(inputDelay);
   }
 }
-createPromise(2, 1500)
-  .then(({ position, delay }) => {
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  })
-  .catch(({ position, delay }) => {
-    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-  });
-  createPromise(3, 2500)
-  .then(({ position, delay }) => {
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  }
-  )
-  .catch(({ position, delay }) => {
-    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-  }
-  );
-  createPromise(4, 3500)
-  .then(({ position, delay }) => {
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  }
-  )
-  .catch(({ position, delay }) => {
-    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-  }
-  );
-  
