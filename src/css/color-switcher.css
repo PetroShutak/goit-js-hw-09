@@ -50,3 +50,7 @@ button {
   background-color: red;
   color: white;
 }
+.stop-button:disabled {
+  background-color: gray;
+  color: white;
+}
