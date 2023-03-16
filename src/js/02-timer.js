@@ -107,3 +107,31 @@ function convertMs(ms) {
   createMarkup({ days, hours, minutes, seconds });
   return { days, hours, minutes, seconds };
 }
+
+// title-startTimer
+function timerStart() {
+  timerId = setInterval(() => {
+    currentDate = new Date().getTime();
+    if (selectedDate - currentDate < 1000) {
+      clearInterval(timerId);
+      refs.btnStartTimer.disabled = true;
+      refs.dateInput.disabled = false;
+      document.title = "Timer Ended";
+      Report.info(
+        '✅ The End! Timer stopped!',
+        'Please, if you want to start timer, choose a date and click on start or reload this page',
+        'Ok'
+      );
+      return;
+    } else {
+      refs.btnStartTimer.disabled = true;
+      refs.dateInput.disabled = true;
+      currentDate += 1000;
+      remainingTime = Math.floor(selectedDate - currentDate);
+      const { days, hours, minutes, seconds } = convertMs(remainingTime);
+      document.title = `${days}:${hours}:${minutes}:${seconds}`;
+      createMarkup({ days, hours, minutes, seconds });
+    }
+  }, TIMER_DELAY);
+}
+
