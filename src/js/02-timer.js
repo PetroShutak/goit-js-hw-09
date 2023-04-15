@@ -34,7 +34,7 @@ const options = {
   },
 };
 
-flatpickr(refs.dateInput, options);
+flatpickr('#datetime-picker', options);
 
 Report.info('✌🏻 Hello, my Friend!', 'Choose a date and click on start', 'Ok');
 
